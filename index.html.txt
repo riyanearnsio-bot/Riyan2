@@ -1,360 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Access</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
-
-body{
-  background:#0b0d12;
-  color:#fff;
-  min-height:100vh;
-}
-
-.top-bar{
-  width:100%;
-  background:#151922;
-  border-bottom:1px solid #292f3a;
-  overflow:hidden;
-  white-space:nowrap;
-  padding:12px 0;
-}
-
-.ticker{
-  display:inline-block;
-  animation:move 18s linear infinite;
-  color:#00e5ff;
-  font-size:14px;
-}
-
-@keyframes move{
-  from{transform:translateX(100vw);}
-  to{transform:translateX(-100%);}
-}
-
-.container{
-  width:100%;
-  max-width:500px;
-  margin:auto;
-  padding:15px;
-}
-
-.logo{
-  text-align:center;
-  font-size:25px;
-  font-weight:bold;
-  margin:15px 0;
-}
-
-.logo span{
-  color:#00e5ff;
-}
-
-.card{
-  background:#151922;
-  border:1px solid #2b3240;
-  border-radius:18px;
-  padding:16px;
-  margin-bottom:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
-
-.video-box{
-  width:100%;
-  aspect-ratio:16/9;
-  background:#050505;
-  border-radius:12px;
-  overflow:hidden;
-}
-
-.video-box iframe,
-.video-box video{
-  width:100%;
-  height:100%;
-  border:0;
-}
-
-.title{
-  font-size:22px;
-  font-weight:bold;
-  margin:15px 0 8px;
-}
-
-.desc{
-  color:#aeb6c5;
-  font-size:14px;
-  line-height:1.5;
-}
-
-.stats{
-  display:flex;
-  justify-content:space-between;
-  margin-top:18px;
-  background:#0d1017;
-  padding:12px;
-  border-radius:12px;
-  font-size:14px;
-}
-
-.online{
-  color:#2cff8f;
-}
-
-.install-btn{
-  display:block;
-  width:100%;
-  text-align:center;
-  text-decoration:none;
-  background:linear-gradient(135deg,#00c6ff,#0072ff);
-  color:white;
-  font-size:18px;
-  font-weight:bold;
-  padding:16px;
-  border-radius:14px;
-  margin-top:18px;
-  transition:.2s;
-}
-
-.install-btn:hover{
-  transform:scale(1.02);
-}
-
-.install-btn:active{
-  transform:scale(.98);
-}
-
-.comment-title{
-  font-size:18px;
-  font-weight:bold;
-  margin-bottom:15px;
-}
-
-.comment{
-  display:flex;
-  gap:10px;
-  margin-bottom:16px;
-  border-bottom:1px solid #292f3a;
-  padding-bottom:12px;
-}
-
-.avatar{
-  width:40px;
-  height:40px;
-  min-width:40px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#00c6ff,#7b2cff);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:bold;
-}
-
-.comment-name{
-  color:#00d9ff;
-  font-size:14px;
-  font-weight:bold;
-  margin-bottom:4px;
-}
-
-.comment-text{
-  color:#d6d9df;
-  font-size:14px;
-  line-height:1.4;
-}
-
-.footer{
-  text-align:center;
-  color:#707887;
-  font-size:12px;
-  padding:20px;
-}
-
-.popup{
-  position:fixed;
-  left:50%;
-  bottom:20px;
-  transform:translateX(-50%) translateY(100px);
-  background:#1b2130;
-  border:1px solid #34405a;
-  color:white;
-  padding:13px 20px;
-  border-radius:10px;
-  transition:.4s;
-  z-index:100;
-}
-
-.popup.show{
-  transform:translateX(-50%) translateY(0);
-}
-</style>
-</head>
-
-<body>
-
-<div class="top-bar">
-  <div class="ticker">
-    🔥 Limited Access Available • Premium Features • Fast & Secure • Join Now •
-  </div>
-</div>
-
-<div class="container">
-
-  <div class="logo">
-    PREMIUM <span>ACCESS</span>
-  </div>
-
-  <!-- VIDEO CARD -->
-  <div class="card">
-
-    <div class="video-box">
-      <!-- YOUTUBE VIDEO ID YA APNA VIDEO LINK LAGAYE -->
-      ```html
-<video controls autoplay playsinline>
-  <source src="video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-    </div>
-
-    <div class="title">
-      Unlock Premium Access
-    </div>
-
-    <div class="desc">
-      Get access to exclusive content and premium features.
-      Click the button below to continue.
-    </div>
-
-    <div class="stats">
-      <div>
-        👁 <span id="viewers">2,847</span> Watching
-      </div>
-
-      <div class="online">
-        ● LIVE
-      </div>
-    </div>
-
-    <!-- APNA LINK YAHAN LAGAYE -->
-    <a href="https://1024terabox.com/s/1csL_nv3gAy__jEjbgWYBxA" class="install-btn" id="installBtn">
-      INSTALL NOW
-    </a>
-
-  </div>
-
-  <!-- COMMENTS -->
-  <div class="card">
-
-    <div class="comment-title">
-      💬 Live Comments
-    </div>
-
-    <div id="comments">
-
-      <div class="comment">
-        <div class="avatar">A</div>
-        <div>
-          <div class="comment-name">Aman</div>
-          <div class="comment-text">
-            Wow! This is really amazing 🔥
-          </div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar">R</div>
-        <div>
-          <div class="comment-name">Rahul</div>
-          <div class="comment-text">
-            Finally it worked for me 😍
-          </div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar">S</div>
-        <div>
-          <div class="comment-name">Shivam</div>
-          <div class="comment-text">
-            Very fast and easy to use 🔥
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<div class="footer">
-  © 2026 Premium Access. All Rights Reserved.
-</div>
-
-<div class="popup" id="popup">
-  New user joined! 🔥
-</div>
-
-<script>
-
-/* LIVE VIEWER COUNT */
-
-let viewers = 2847;
-
-setInterval(function(){
-
-  let change = Math.floor(Math.random() * 15) - 5;
-
-  viewers += change;
-
-  if(viewers < 2000){
-    viewers = 2000;
-  }
-
-  document.getElementById("viewers").innerText =
-    viewers.toLocaleString();
-
-}, 2500);
-
-
-/* POPUP */
-
-function showPopup(){
-
-  const popup =
-    document.getElementById("popup");
-
-  popup.classList.add("show");
-
-  setTimeout(function(){
-
-    popup.classList.remove("show");
-
-  },3000);
-
-}
-
-setInterval(showPopup,8000);
-
-
-/* BUTTON CLICK */
-
-document
-.getElementById("installBtn")
-.addEventListener("click",function(){
-
-  console.log("Continue button clicked");
-
-});
-
-</script>
-
-</body>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VIP Proxy Server</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f5f7;
+    color:#111;
+}
+
+.activity{
+    background:#ffffff;
+    padding:12px 10px;
+    font-size:13px;
+    font-weight:bold;
+    line-height:1.7;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.container{
+    max-width:520px;
+    margin:auto;
+    background:white;
+    min-height:100vh;
+    padding-bottom:30px;
+}
+
+.watch{
+    text-align:center;
+    font-size:24px;
+    font-weight:900;
+    margin:22px 0 12px;
+}
+
+.video-box{
+    width:94%;
+    margin:auto;
+    background:#000;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
+}
+
+.video-box video{
+    width:100%;
+    display:block;
+    background:#000;
+}
+
+.premium{
+    text-align:center;
+    margin-top:24px;
+}
+
+.premium span{
+    background:#ffe600;
+    padding:7px 16px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:900;
+}
+
+.title{
+    text-align:center;
+    font-size:28px;
+    font-weight:900;
+    margin-top:12px;
+    letter-spacing:.5px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#555;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.rating{
+    text-align:center;
+    margin-top:13px;
+    color:#ffb400;
+    font-size:21px;
+    letter-spacing:2px;
+}
+
+.rating-text{
+    color:#555;
+    font-size:12px;
+    margin-left:5px;
+}
+
+.install{
+    display:block;
+    width:88%;
+    margin:22px auto;
+    padding:17px 10px;
+    background:#16a34a;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:21px;
+    font-weight:900;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    transition:.2s;
+}
+
+.install:hover{
+    transform:scale(1.02);
+    background:#12843d;
+}
+
+.comments-title{
+    width:90%;
+    margin:25px auto 10px;
+    font-size:17px;
+    font-weight:900;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+}
+
+.comment{
+    width:90%;
+    margin:8px auto;
+    background:#f5f5f5;
+    padding:10px;
+    border-radius:7px;
+    font-size:13px;
+}
+
+.comment b{
+    color:#222;
+}
+
+.watch-count{
+    text-align:center;
+    color:#555;
+    font-size:13px;
+    margin-top:15px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    color:#888;
+    font-size:11px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="activity">
+        🔥 Arjun claimed VIP proxy ✅ 1,892 users installed today ⚡
+    </div>
+
+    <div class="watch">
+        WATCH FULL VIDEO
+    </div>
+
+    <div class="video-box">
+
+        <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="poster.jpg">
+
+            <source src="video.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+    <div class="premium">
+        <span>NEW PREMIUM</span>
+    </div>
+
+    <div class="title">
+        VIP PROXY SERVER
+    </div>
+
+    <div class="subtitle">
+        FREE FIRE PROXY SERVER UNLIMITED ACCESS
+    </div>
+
+    <div class="rating">
+        ★★★★★
+        <span class="rating-text">4.9/5</span>
+    </div>
+
+    <!-- INSTALL BUTTON -->
+
+    <a
+        class="install"
+        href="https://1024terabox.com/s/1wpkm32Lh4oLHV8eGo5DBbA"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        ⬇ INSTALL NOW
+
+    </a>
+
+    <div class="comments-title">
+        Live Comments
+    </div>
+
+    <div class="comment">
+        <b>Arjun</b><br>
+        🔥 VIP proxy working perfectly!
+    </div>
+
+    <div class="comment">
+        <b>Vikas</b><br>
+        ⚡ Proxy access received.
+    </div>
+
+    <div class="comment">
+        <b>Mohit</b><br>
+        🛡 VIP server activated.
+    </div>
+
+    <div class="comment">
+        <b>Harsh</b><br>
+        ✅ Installed successfully.
+    </div>
+
+    <div class="watch-count">
+        👀 842 watching
+    </div>
+
+    <div class="footer">
+        © 2026 VIP Proxy Server
+    </div>
+
+</div>
+
+<script>
+
+const activities = [
+    "🔥 Arjun claimed VIP proxy",
+    "⚡ Vikas claimed proxy access",
+    "🛡 Mohit claimed VIP server",
+    "✅ Harsh installed proxy now",
+    "🔥 Rahul claimed VIP proxy",
+    "⚡ Aman installed proxy"
+];
+
+let activityBox = document.querySelector(".activity");
+let i = 0;
+
+setInterval(() => {
+
+    i++;
+
+    if(i >= activities.length){
+        i = 0;
+    }
+
+    activityBox.innerHTML =
+        activities[i] +
+        " ✅ 1,892 users installed today";
+
+}, 3500);
+
+
+let watching = 842;
+
+setInterval(() => {
+
+    let change = Math.random() > .5 ? 1 : -1;
+
+    watching += change;
+
+    if(watching < 800){
+        watching = 800;
+    }
+
+    if(watching > 900){
+        watching = 900;
+    }
+
+    document.querySelector(".watch-count").innerHTML =
+        "👀 " + watching + " watching";
+
+}, 5000);
+
+</script>
+
+</body>
 </html>
